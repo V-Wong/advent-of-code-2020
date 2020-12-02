@@ -30,7 +30,7 @@ def three_sum(nums: List[int], target: int) -> Union[Tuple[int, int, int], None]
 
 
 if __name__ == "__main__":
-    nums = reader("./input.txt")
+    nums = reader("./input.txt", int)
 
     if (answer := three_sum(nums, 2020)) is not None:
         print(prod([nums[x] for x in answer]))

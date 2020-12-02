@@ -1,5 +1,5 @@
-from typing import List
+from typing import List, Callable
 
 
-def reader(file_path: str) -> List[int]:
-    return [int(x) for x in list(open(file_path))]
+def reader(file_path: str, func: Callable) -> List[int]:
+    return [func(x) for x in list(open(file_path))]
