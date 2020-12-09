@@ -2,7 +2,7 @@ from typing import List
 
 import math
 
-from reader import reader
+import reader
 
 
 def count_trees(tree_map: List[str], right: int, down: int) -> int:
@@ -18,7 +18,7 @@ def count_trees(tree_map: List[str], right: int, down: int) -> int:
 
 
 if __name__ == "__main__":
-    data = reader("./input.txt", str)
+    data = reader.read_lines("./input.txt")
 
     slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
 

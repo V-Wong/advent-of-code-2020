@@ -2,7 +2,7 @@ from typing import List, Dict
 
 import re
 
-from reader import reader
+import reader
 
 
 RULES = {
@@ -36,7 +36,7 @@ def is_valid_passport2(passport: Dict[str, str]) -> bool:
 
 
 if __name__ == "__main__":
-    data = reader("./input.txt", lambda x: str(x).replace("\n", " ") if x != "\n" else x)
+    data = reader.read_lines("./input.txt", lambda x: str(x).replace("\n", " ") if x != "\n" else x)
     raw_passports = "".join(data).split("\n") # ugly hack
 
     passports = [parse_passport(raw_passport) for raw_passport in raw_passports]

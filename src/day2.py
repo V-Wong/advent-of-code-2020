@@ -4,7 +4,7 @@ import re
 from dataclasses import dataclass
 from collections import Counter
 
-from reader import reader
+import reader
 
 
 @dataclass
@@ -39,5 +39,5 @@ def parse(policy: str) -> PasswordPolicy:
 
 
 if __name__ == "__main__":
-    password_policies = reader("./input.txt", parse)
+    password_policies = reader.read_lines("./input.txt", parse)
     print(count_valid_passwords(password_policies, validator2))

@@ -3,7 +3,7 @@ from typing import List, Tuple
 from dataclasses import dataclass
 import math
 
-from reader import reader
+import reader
 
 
 ROW_MAX = 127
@@ -53,7 +53,7 @@ def find_own_seat_id(boarding_passes: List[str]) -> int:
 
 
 if __name__ == "__main__":
-    data = reader("./input.txt", lambda x: str(x).replace("B", INCREASE).replace("R", INCREASE))
+    data = reader.read_lines("./input.txt", lambda x: str(x).replace("B", INCREASE).replace("R", INCREASE))
     
     passes = [BoardingPass(line[:7], line[7:]) for line in data]
 
